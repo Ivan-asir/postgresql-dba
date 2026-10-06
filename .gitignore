@@ -1,4 +1,6 @@
 .env
+.env.*
+!.env.example
 *.env
 *.dump
 *.backup
@@ -7,10 +9,16 @@
 .pgpass
 .vault_pass
 vault-password.txt
+vault.yml
+**/vault.yml
 *.pem
 *.key
+*.p12
+*.pfx
 id_rsa*
 id_ed25519*
+**/.ssh/
+*.retry
 .DS_Store
 .idea/
 .vscode/
