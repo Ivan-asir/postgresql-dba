@@ -1,7 +1,5 @@
 # Alcance del laboratorio
 
-## Incluido inicialmente
-
 - Instalación y validación de PostgreSQL en Rocky Linux.
 - Bases de datos, roles, esquemas y permisos mínimos.
 - SQL con JOIN, agregaciones, CTE y funciones de ventana.

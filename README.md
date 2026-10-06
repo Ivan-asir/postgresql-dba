@@ -17,7 +17,7 @@ replicación física y automatización con Ansible.
 
 ## Estado
 
-| Práctica | Estado |
+| Apartado  | Estado |
 |---|---|
 | Red y SSH | Pendiente |
 | Preparación de Rocky Linux | Pendiente |

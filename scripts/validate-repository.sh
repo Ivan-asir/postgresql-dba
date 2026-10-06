@@ -2,11 +2,11 @@
 
 echo "Validando repositorio..."
 
-# Comprobar que estamos dentro de un repositorio Git
+# Comprobar que estás dentro de un repositorio Git
 git rev-parse --is-inside-work-tree > /dev/null 2>&1
 
 if [ $? -ne 0 ]; then
-    echo "ERROR: no estamos dentro de un repositorio Git."
+    echo "ERROR: no estás dentro de un repositorio Git."
     exit 1
 fi
 
