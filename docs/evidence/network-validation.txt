@@ -1,0 +1,28 @@
+$ ip -br addr
+enp0s3           UP             10.0.2.15/24 fd17:625c:f037:2:a00:27ff:fef9:cab3/64 fe80::a00:27ff:fef9:cab3/64
+enp0s8           UP             192.168.56.20/24 fe80::a00:27ff:fe02:dd2a/64
+
+$ ip route
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15 metric 100
+192.168.56.0/24 dev enp0s8 proto kernel scope link src 192.168.56.20 metric 101
+
+$ nmcli device status
+DEVICE  TYPE      STATE                   CONNECTION
+enp0s3  ethernet  conectado               enp0s3
+enp0s8  ethernet  conectado               enp0s8
+
+$ nmcli -f NAME,TYPE,DEVICE connection show --active
+NAME    TYPE      DEVICE
+enp0s3  ethernet  enp0s3
+enp0s8  ethernet  enp0s8
+
+$ ip -4 route get 192.168.56.1
+192.168.56.1 dev enp0s8 src 192.168.56.20 uid 1000
+cache
+
+$ getent hosts download.rockylinux.org
+2a04:4e42:4c::644 rockylinux.map.fastlydns.net download.rockylinux.org dualstack.dl.map.rockylinux.org
+2a04:4e42:4d::644 rockylinux.map.fastlydns.net download.rockylinux.org dualstack.dl.map.rockylinux.org
+
+$ ssh labadmin@192.168.56.20 hostname
+pg-primary

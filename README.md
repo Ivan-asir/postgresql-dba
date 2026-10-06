@@ -1,4 +1,4 @@
-### Laboratorio PostgreSQL DBA
+# Laboratorio PostgreSQL DBA
 
 Laboratorio de administración PostgreSQL sobre Rocky Linux 9.
 
