@@ -1,0 +1,46 @@
+$ recuentos de tablas
+clientes=20
+productos=100
+pedidos=200
+pedido_items=200
+
+$ roles del laboratorio
+tienda_readonly|login=false
+tienda_readwrite|login=false
+
+$ privilegios de tablas
+                                                      Privilegios
+ Esquema |      Nombre      |   Tipo    |          Privilegios           | Privilegios de acceso a columnas | Políticas
+---------+------------------+-----------+--------------------------------+----------------------------------+-----------
+ public  | clientes         | tabla     | postgres=arwdDxtm/postgres    +|                                  |
+         |                  |           | tienda_readonly=r/postgres    +|                                  |
+         |                  |           | tienda_readwrite=arwd/postgres |                                  |
+ public  | clientes_id_seq  | secuencia | postgres=rwU/postgres         +|                                  |
+         |                  |           | tienda_readwrite=rU/postgres   |                                  |
+ public  | pedido_items     | tabla     | postgres=arwdDxtm/postgres    +|                                  |
+         |                  |           | tienda_readonly=r/postgres    +|                                  |
+         |                  |           | tienda_readwrite=arwd/postgres |                                  |
+ public  | pedidos          | tabla     | postgres=arwdDxtm/postgres    +|                                  |
+         |                  |           | tienda_readonly=r/postgres    +|                                  |
+         |                  |           | tienda_readwrite=arwd/postgres |                                  |
+ public  | pedidos_id_seq   | secuencia | postgres=rwU/postgres         +|                                  |
+         |                  |           | tienda_readwrite=rU/postgres   |                                  |
+ public  | productos        | tabla     | postgres=arwdDxtm/postgres    +|                                  |
+         |                  |           | tienda_readonly=r/postgres    +|                                  |
+         |                  |           | tienda_readwrite=arwd/postgres |                                  |
+ public  | productos_id_seq | secuencia | postgres=rwU/postgres         +|                                  |
+         |                  |           | tienda_readwrite=rU/postgres   |                                  |
+(7 filas)
+
+
+$ lectura como tienda_readonly
+SET
+ count
+-------
+    20
+(1 fila)
+
+
+$ escritura denegada como tienda_readonly
+SET
+ERROR:  permiso denegado a la tabla productos

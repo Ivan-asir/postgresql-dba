@@ -19,10 +19,10 @@ replicación física y automatización con Ansible.
 
 | Apartado  | Estado |
 |---|---|
-| Red y SSH | Pendiente |
-| Preparación de Rocky Linux | Pendiente |
-| Instalación de PostgreSQL | Pendiente |
-| SQL, roles y permisos | Pendiente |
+| Red y SSH | OK |
+| Preparación de Rocky Linux | OK |
+| Instalación de PostgreSQL | OK |
+| SQL, roles y permisos | OK |
 | Backup y restore | Pendiente |
 | PITR | Pendiente |
 | Rendimiento | Pendiente |
